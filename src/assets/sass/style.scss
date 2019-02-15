@@ -1,5 +1,7 @@
+@import url("https://use.typekit.net/ypz0fwx.css");
+
 html {
-  font-family: sans-serif;
+  font-family: "proxima-nova", Helvetica, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -198,7 +200,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -617,4 +619,50 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.accent {
+  color: #e94e1b;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem 3rem;
+  position: fixed;
+  nav > ul {
+    list-style: none;
+    & > li {
+      display: inline-block;
+      margin: 1rem;
+    }
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section#home {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../images/home.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 40vw;
+  color: #fff;
 }
