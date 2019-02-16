@@ -1,5 +1,8 @@
 @import url("https://use.typekit.net/ypz0fwx.css");
 
+$primary: #282a36;
+$secondary: #e94e1b;
+
 html {
   font-family: "proxima-nova", Helvetica, sans-serif;
   -ms-text-size-adjust: 100%;
@@ -622,21 +625,40 @@ pre tt:after {
 }
 
 .accent {
-  color: #e94e1b;
+  color: $secondary;
 }
 
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 1rem 3rem;
+  padding: 1rem 3rem;
+  width: 100%;
   position: fixed;
+  background: $primary;
+  h1 {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   nav > ul {
     list-style: none;
+    margin: 0;
     & > li {
       display: inline-block;
       margin: 1rem;
+      & > a {
+        transition: 0.2s;
+        &:hover {
+          color: $secondary;
+        }
+      }
     }
+  }
+
+  nav > div.icon {
+    display: none;
   }
 
   a {
@@ -644,8 +666,11 @@ header {
     text-decoration: none;
   }
 }
+main {
+  padding-top: 98px;
+}
 footer {
-  margin-top: 3rem;
+  margin: 1.5rem 0;
   text-align: center;
 }
 
@@ -656,13 +681,56 @@ footer {
 }
 
 section#home {
-  height: 100vh;
+  height: 90vh;
+  min-height: 480px;
   width: 100vw;
-  background-image: url("../images/home.jpg");
+  background: linear-gradient(rgba($primary, 0.25), rgba($primary, 0.5)),
+    url("../images/home.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 40vw;
   color: #fff;
+
+  h2 {
+    font-size: 8vmin;
+    font-weight: 600;
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 1.5;
+    padding-right: 20vw;
+  }
+}
+
+div.icon {
+  width: 3rem;
+  height: 3rem;
+  background: rgba($primary, 0.8);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5rem;
+  svg {
+    max-width: 2rem;
+    max-height: 2rem;
+    margin: 0.5rem;
+    fill: #fff;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav > ul {
+    display: none;
+  }
+  nav > div.icon {
+    display: block !important;
+    position: fixed;
+    top: 1rem;
+    right: 0rem;
+    cursor: pointer;
+  }
+  main {
+    padding-top: 71px;
+  }
 }
