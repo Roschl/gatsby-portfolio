@@ -41,7 +41,13 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     },
-    `@contentful/gatsby-transformer-contentful-richtext`
+    `@contentful/gatsby-transformer-contentful-richtext`,
+    {
+      resolve: `gatsby-v2-plugin-page-transitions`,
+      options: {
+        transitionTime: 500
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
