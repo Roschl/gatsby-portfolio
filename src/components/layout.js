@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import PageTransition from "gatsby-plugin-page-transitions";
 
 import Header from "./header";
 import "../assets/sass/style.scss";
@@ -20,10 +19,8 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <PageTransition transitionTime={500}>
-          <main>{children}</main>
-          <footer>© {new Date().getFullYear()} Jacob Herper</footer>
-        </PageTransition>
+        <main>{children}</main>
+        <footer>© {new Date().getFullYear()} Jacob Herper</footer>
       </>
     )}
   />
