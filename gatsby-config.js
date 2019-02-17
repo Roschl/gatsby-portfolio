@@ -1,3 +1,9 @@
+const dotenv = require("dotenv");
+
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config();
+}
+
 module.exports = {
   siteMetadata: {
     title: `Jacob Herper`,
@@ -27,7 +33,16 @@ module.exports = {
         icon: `src/assets/images/favicon.png` // This path is relative to the root of the site.
       }
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-page-transitions`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `vx5bwlrmmk3w`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+      }
+    },
+    `@contentful/gatsby-transformer-contentful-richtext`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

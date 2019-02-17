@@ -1,10 +1,10 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
-import { Menu } from "icons";
-import Nav from "nav";
+import { Menu } from "../components/icons";
+import Nav from "../components/nav";
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header
     style={{
       marginBottom: `1.45rem`

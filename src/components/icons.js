@@ -1,5 +1,11 @@
 import React from "react";
 
+// import Github from "../assets/images/icons/github.svg";
+// import Linkedin from "../assets/images/icons/linkedin.svg";
+// import Twitter from "../assets/images/icons/twitter.svg";
+// import Instagram from "../assets/images/icons/instagram.svg";
+// import Menu from "../assets/images/icons/menu.svg";
+
 const Github = () => (
   <div className="icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
