@@ -6,6 +6,15 @@ import { Menu } from "./icons";
 import Nav from "./nav";
 import MobileMenu from "./menu";
 
+const styles = {
+  header: {
+    showMenu: false 
+  },
+  h1: {
+    margin: 0 
+  }
+}
+
 class Header extends React.Component {
   state = {
     showMenu: false
@@ -14,11 +23,9 @@ class Header extends React.Component {
   render() {
     return (
       <header
-        style={{
-          marginBottom: `1.45rem`
-        }}
+        style={styles.header}
       >
-        <h1 style={{ margin: 0 }}>
+        <h1 style={styles.h1}>
           <Link to="/">
             <span className="accent">Jacob</span> Herper
           </Link>
