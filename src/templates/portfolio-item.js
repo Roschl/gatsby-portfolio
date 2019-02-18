@@ -84,7 +84,7 @@ export const pageQuery = graphql`
         }
       }
       featured_image {
-        fluid(quality: 70) {
+        fluid(maxWidth: 1920, quality: 70) {
           ...GatsbyContentfulFluid
         }
       }
